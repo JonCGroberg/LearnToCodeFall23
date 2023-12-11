@@ -17,24 +17,14 @@ window.onload = () => {
 };
 
 function addPokemon(pokemonData) {
-    return `<div class = "card">
+  return `<div class = "card">
               <div class = "grid">
                 <h1>${capitalize(pokemonData.name)}</h1>
-                <img class="img" src = "${pokemonData.official_artwork_default}">
+                <img class="img" src = "${
+                  pokemonData.official_artwork_default
+                }">
               </div>
               <div class = "card-grid">
-
-                <div>
-                  <h4>Stats</h4>
-                  <p> Height: ${convertDeciToFeet(pokemonData.height)} ft</p>
-                  <p> Weight: ${convertHectoToLbs(pokemonData.weight)} lbs </p>
-                </div>
-                <div>
-                  <h4>Types</h4>
-                  <div>${pokemonData.types
-                    .map((type) => `<p>${type}</p>`)
-                    .join("")}</div>
-                </div>
                 <div>
                   <h4>Base Stats</h4>
                     <div>${Object.entries(pokemonData.base_stats)
@@ -48,12 +38,25 @@ function addPokemon(pokemonData) {
                     .map((ability) => `<p>${ability}</p>`)
                     .join("")}</div>
                 </div>
+                <div>
+                  <h4>Types</h4>
+                  <div>${pokemonData.types
+                    .map((type) => `<p>${type}</p>`)
+                    .join("")}</div>
+                </div>
+                <div>
+                  <h4>Stats</h4>
+                  <div>
+                    <p> Height: ${convertDeciToFeet(pokemonData.height)} ft</p>
+                    <p> Weight: ${convertHectoToLbs(pokemonData.weight)} lbs </p>
+                  </div>
+                </div>
               </div>
             <div>
               <h4>Moves</h4>
-              <div  class ="moves-grid">${pokemonData.moves
+              <div class ="moves-grid">${pokemonData.moves
                 .map((move) => `<p>${move}</p>`)
                 .join("")}</div>
               </div>
             </div>`;
-  }
+}

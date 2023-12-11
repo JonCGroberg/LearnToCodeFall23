@@ -17,10 +17,14 @@ h4 {
   border-bottom: rgb(182, 182, 182) 2px dashed;
 }
 
+h4 + div {
+max-height: 200px;
+}
+
 .card-grid {
   text-align: start;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: 0rem 2rem;
   padding-bottom: 1rem;
 }
@@ -32,6 +36,7 @@ h4 {
 }
 
 .card-grid > * > * > *:hover {
+    transition: 100ms;
   color: rgb(138, 129, 12);
   cursor: pointer;
   background-color: rgba(179, 168, 13, 0.151);
@@ -43,7 +48,7 @@ h4 {
   gap: 0.6rem 0.6rem;
   grid-template-columns: repeat(auto-fill, minmax(12ch, 1fr));
   overflow-x: auto;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .moves-grid > *:hover {
