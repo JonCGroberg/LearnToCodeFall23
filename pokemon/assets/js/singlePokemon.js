@@ -18,12 +18,10 @@ window.onload = () => {
 
 function addPokemon(pokemonData) {
     return `<div class = "card">
-              <h4>${capitalize(pokemonData.name)}</h4>
-              <div>
-                  <img class="img" src = "${
-                    pokemonData.official_artwork_default
-                  }">
-                </div>
+              <div class = "grid">
+                <h1>${capitalize(pokemonData.name)}</h1>
+                <img class="img" src = "${pokemonData.official_artwork_default}">
+              </div>
               <div class = "card-grid">
 
                 <div>

@@ -1,47 +1,74 @@
-body{
-    font-family: 'Press Start 2P';
-    font-size: x-small;
+body {
+  font-family: "Press Start 2P";
+  font-size: x-small;
 }
 
-.card{
-    background: #ebebeb;
-    text-align: center;
-    padding: 1rem 4rem;
-    margin: 4rem 2rem;
-    border: rgba(0, 0, 0, 0.3) 1px solid;
-    border-radius: .5rem;
-    box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px 1px;
-
+.card {
+  background: #ebebeb;
+  padding: 1rem 4rem;
+  margin: 4rem 2rem;
+  border: rgba(0, 0, 0, 0.3) 1px solid;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px 1px;
 }
 
-.card-grid{
-    text-align: start;
-    display: grid;
-    grid-template-columns:repeat( auto-fit, minmax(10rem, 1fr));
-    gap: 0rem 2rem;
+h4 {
+  padding: 1rem 0rem;
+  border-bottom: rgb(182, 182, 182) 2px dashed;
 }
 
-.card-grid > *{
-    border-bottom: rgb(182, 182, 182) 1px dashed;
-    padding: 0px;
-    margin: 0px;
-    min-width: max-content;
-
+.card-grid {
+  text-align: start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0rem 2rem;
+  padding-bottom: 1rem;
 }
 
-.moves-grid{
-    text-align: start;
-    display: grid;
-    gap: .6rem .6rem;
-    grid-template-columns: repeat( auto-fill, minmax(12ch, 1fr));
-    overflow-x:auto;
+.card-grid > * {
+  padding: 0px;
+  margin: 0px;
+  min-width: max-content;
+}
+
+.card-grid > * > * > *:hover {
+  color: rgb(138, 129, 12);
+  cursor: pointer;
+  background-color: rgba(179, 168, 13, 0.151);
+}
+
+.moves-grid {
+  text-align: start;
+  display: grid;
+  gap: 0.6rem 0.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(12ch, 1fr));
+  overflow-x: auto;
+  padding-bottom: 2rem;
+}
+
+.moves-grid > *:hover {
+  color: rgb(138, 129, 12);
+  cursor: pointer;
+  background-color: rgba(179, 168, 13, 0.151);
 }
 
 .moves-grid p {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
-.img{
-    width: 150px;
+.img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 18rem;
+  gap: 5rem;
+  object-position: top;
+  grid-template-rows: max-content;
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  text-align: start;
+  align-items: center;
 }
