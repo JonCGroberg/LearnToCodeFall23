@@ -93,7 +93,7 @@ let getPokemonListByType = (type) => {
 
 let getAllPokemonList = () => {
     // Get all pokemon
-    fetch("https://pokemon-backend-dfea.onrender.com/api/pokemon")
+    fetch("https://pokemon-backend-dfea.onrender.com/api/pokemon?sort=asc")
         .then((res) => res.json())
         .then((pokemonList) => {
             displayPokemonDetails(pokemonList);

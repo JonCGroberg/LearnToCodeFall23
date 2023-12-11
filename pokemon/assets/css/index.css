@@ -1,23 +1,14 @@
 body{
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P';
+    font-size: smaller;
+    line-height: 1.1ch;
 }
-
-#logo {
-    width: 50px;
-    height: 50px;
-    background-image: url("../images/logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
-    border-radius: 50%;
-}
-
 #home #search-sort-filter-container{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 #home .icon-container{
@@ -25,7 +16,7 @@ body{
     text-align: center;
     margin: 10px;
     cursor: pointer;
-    transition: .66s;
+    transition: .33s;
     border-radius: 10px;
 }
 
@@ -42,24 +33,29 @@ body{
 #home #list {
     /* border: solid black 1px; */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px 30px;
-    max-width: 800px;
+    grid-template-columns:  repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1rem;
+    padding: 0px 1rem;
     margin: 0 auto;
 }
 
 #home .card {
-    /* border: solid black 1px; */
+    background: #f7f7f7;
+    border: solid rgba(0, 0, 0, 0.1) 1px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px;
+    border-width: 2px;
+    border-color: #f7f7f7;
     cursor: pointer;
-    transition: .66s;
+    transition: .33s;
+    padding: 1rem 0rem;
 }
 
 
 #home .card:hover {
-    transform: scale(.9) rotate(.015turn);
-    background-color: #fff2f6;
-    border-radius: 20px;
+    border-color: rgb(226, 205, 11);
+    transform: scale(1.05);
+    box-shadow: rgb(226, 205, 11) 0px 0px 5px 0px;
+
 }
 
 #home .thumbnail {
@@ -82,37 +78,17 @@ body{
     padding:5px;
 }
 
-.custom-shape-divider-top-1701369213 {
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1701369213 svg {
-    position: relative;
-    display: block;
-    width: calc(228% + 1.3px);
-    height: 121px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1701369213 .shape-fill {
-    fill: #ffebeb;
-}
-
 .active{
     color:rgb(255, 147, 147);
     text-decoration: underline;
 }
 
 .active.all{
-    color: rgb(228, 228, 228);
+    color: rgb(122, 121, 121);
 }
 
 .active.fire{
-    color: rgb(255, 150, 150);
+    color: rgb(252, 101, 101);
 }
 
 .active.grass{
@@ -128,5 +104,5 @@ body{
 }
 
 .active.bug{
-    color: rgb(170, 236, 170);
+    color: rgb(116, 156, 116);
 }
