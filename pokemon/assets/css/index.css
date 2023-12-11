@@ -2,10 +2,6 @@ body{
     font-family: 'Press Start 2P', cursive;
 }
 
-nav {
-    /* border: solid black 1px; */
-}
-
 #logo {
     width: 50px;
     height: 50px;
@@ -25,11 +21,9 @@ nav {
 }
 
 #home .icon-container{
-    /* border: solid black 1px; */
     padding: 12px;
     text-align: center;
     margin: 10px;
-    /* cursor: url("../images/icons/pokeball-cursor.png"), pointer; */
     cursor: pointer;
     transition: .66s;
     border-radius: 10px;
@@ -109,30 +103,30 @@ nav {
 }
 
 .active{
-    color:red;
+    color:rgb(255, 147, 147);
     text-decoration: underline;
 }
 
 .active.all{
-    color: lightgrey;
+    color: rgb(228, 228, 228);
 }
 
 .active.fire{
-    color: red;
+    color: rgb(255, 150, 150);
 }
 
 .active.grass{
-    color: lightgreen;
+    color: rgb(110, 212, 110);
 }
 
 .active.electric{
-    color: yellow;
+    color: rgb(165, 165, 0);
 }
 
 .active.water{
-    color: blue;
+    color: rgb(91, 91, 255);
 }
 
 .active.bug{
-    color: green;
+    color: rgb(170, 236, 170);
 }
