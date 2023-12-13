@@ -3,10 +3,41 @@ body {
   font-size: x-small;
 }
 
+/* *{
+  border: red 1px solid;
+} */
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.btn-delete {
+  border: rgba(250, 17, 17, 0.26) 1px solid;
+}
+
+.btn-edit {
+  border: rgba(0, 0, 0, 0.26) 1px solid;
+}
+
+.btn-delete:hover {
+  background-color: rgba(250, 17, 17, 0.26);
+  transition: 250ms;
+}
+
+.btn-edit:hover {
+  background-color: rgba(0, 0, 0, 0.26);
+  transition: 250ms;
+}
+
 .card {
   background: #f5f5f5;
   padding: 1rem 4rem;
-  margin: 4rem 2rem;
+  margin: 8rem 2rem;
   border: rgba(0, 0, 0, 0.1) 1px solid;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 6px 1px;
 }
@@ -17,7 +48,7 @@ h4 {
 }
 
 h4 + div {
-max-height: 200px;
+  max-height: 200px;
 }
 
 .card-grid {
@@ -35,7 +66,7 @@ max-height: 200px;
 }
 
 .card-grid > * > * > *:hover {
-    transition: 100ms;
+  transition: 100ms;
   color: rgb(184, 172, 13);
   cursor: pointer;
   background-color: rgba(126, 120, 9, 0.151);
@@ -63,16 +94,68 @@ max-height: 200px;
 
 .img {
   object-fit: contain;
-  width: 100%;
   max-height: 18rem;
-  gap: 5rem;
-  object-position: top;
-  grid-template-rows: max-content;
+  width: 100%;
+  margin: 0rem;
+  border-radius: 1rem;
+  border: rgba(0, 0, 0, 0.096) 1px solid;
+  padding: 1rem 0rem;
+}
+
+.img:hover {
+  background-color: aliceblue;
+  box-shadow: rgba(121, 121, 121, 0.205) 1px 1px 10px 1px;
+}
+
+header {
 }
 
 .grid {
-  grid-template-columns: 1fr 1fr;
   display: grid;
-  text-align: start;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   align-items: center;
+  justify-content: start;
+  gap: 2rem 50rem;
+}
+
+@media only screen and (max-width: 640px) {
+  header {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#search-sort-filter-container{
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1rem;
+    height: 4rem;
+    overflow: auto;
+}
+
+.icon-container{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    cursor: pointer;
+    transition: .33s;
+    padding: .3rem .6rem;
+}
+
+.icon-container:hover{
+    background-color: #ffebeb;
+}
+
+.icon-container img{
+    width: 30px;
+}
+
+ #list {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1rem;
+    padding: 0px 1rem;
+    margin: 0 auto;
 }

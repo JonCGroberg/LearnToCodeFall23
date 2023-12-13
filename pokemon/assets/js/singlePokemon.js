@@ -12,14 +12,34 @@ window.onload = () => {
     .then((res) => res.json())
     .then((pokemonData) => {
       console.log(pokemonData);
-      singleContainer.innerHTML = addPokemon(pokemonData);
+      singleContainer.innerHTML = pokemonCard_HTML(pokemonData);
+      attachButtons(url);
     });
+
+  function attachButtons(url) {
+    const deleteBtn = document.getElementById("delete");
+    deleteBtn.addEventListener("click", deletePokemon);
+    const editBtn = document.getElementById("edit");
+    editBtn.addEventListener("edit", editPokemon);
+  }
+
+  function deletePokemon() {
+    fetch(url, {
+      method: "DELETE",
+    }).then(() => {
+      window.location.href = "./index.html";
+    });
+  }
 };
 
-function addPokemon(pokemonData) {
+function pokemonCard_HTML(pokemonData) {
   return `<div class = "card">
-              <div class = "grid">
-                <h1>${capitalize(pokemonData.name)}</h1>
+              <div class ="grid">
+                  <header class="">
+                    <h1 class="">${capitalize(pokemonData.name)}</h1>
+                    <button id = "delete" class = "btn btn-delete"">Delete</button>
+                    <button class = "btn btn-edit">Edit</button>
+                  </header>
                 <img class="img" src = "${
                   pokemonData.official_artwork_default
                 }">
@@ -48,7 +68,9 @@ function addPokemon(pokemonData) {
                   <h4>Stats</h4>
                   <div>
                     <p> Height: ${convertDeciToFeet(pokemonData.height)} ft</p>
-                    <p> Weight: ${convertHectoToLbs(pokemonData.weight)} lbs </p>
+                    <p> Weight: ${convertHectoToLbs(
+                      pokemonData.weight
+                    )} lbs </p>
                   </div>
                 </div>
               </div>
