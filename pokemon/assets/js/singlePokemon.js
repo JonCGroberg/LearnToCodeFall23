@@ -47,8 +47,8 @@ function pokemonCard_HTML(pokemonData) {
               <div class = "card-grid">
                 <div>
                   <h4>Base Stats</h4>
-                    <div>${Object.entries(pokemonData.base_stats)
-                      .map(([stat, value]) => `<p>${stat}: ${value}</p>`)
+                    <div class = "stats-grid">${Object.entries(pokemonData.base_stats)
+                      .map(([stat, value]) => `<p>${stat}</p><p>${value}</p>`)
                       .join("")}
                     </div>
                 </div>
